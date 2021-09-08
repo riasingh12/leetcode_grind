@@ -1,0 +1,27 @@
+class Solution {
+public:
+    int maximum69Number (int num) {
+        vector<int>res;
+       while(num>0)
+       {
+           int d=num%10;
+           res.push_back(d);
+           num=num/10;
+       }
+        int n=res.size()-1;
+        for(int i=n;i>=0;i--)
+        {
+            if(res[i]==6)
+            {
+                res[i]=9;
+                break;
+            }
+        }int catto=0;
+    while(n>=0)
+       {
+        catto = catto*10 + res[n];
+        n--;
+       }
+        return catto;
+    }
+};

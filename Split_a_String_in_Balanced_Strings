@@ -1,0 +1,27 @@
+class Solution {
+public:
+    int balancedStringSplit(string s) {
+    int n=s.length();
+    int a=0,b=0;
+    int count=0;
+    int i=0;
+       while(i<n)   
+        {
+            if(s[i]=='R')
+            {
+               a++;
+            }
+           else if(s[i]=='L')
+            {
+               b++;
+            }
+           
+            if(a==b)
+            {
+                count++;
+            }
+           i++;
+        }
+        return count;
+    }
+};
